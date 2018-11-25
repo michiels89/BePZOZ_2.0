@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="http://localhost/BePZOZ_2.0/public/images/fav-icon.png" type="image/x-icon" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+    <title>BePZOZ</title>
+    <!--   View -->
+    <!--    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+    <!-- Icon css link -->
+    <link href="http://localhost/BePZOZ_2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://localhost/BePZOZ_2.0/vendor/line-icon/css/simple-line-icons.css" rel="stylesheet">
+    <link href="http://localhost/BePZOZ_2.0/vendor/elegant-icon/style.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="http://localhost/BePZOZ_2.0/css/bootstrap.min.css" rel="stylesheet">
+     
+    <!-- Rev slider css -->
+    <link href="http://localhost/BePZOZ_2.0/vendor/revolution/css/settings.css" rel="stylesheet">
+    <link href="http://localhost/BePZOZ_2.0/vendor/revolution/css/layers.css" rel="stylesheet">
+    <link href="http://localhost/BePZOZ_2.0/vendor/revolution/css/navigation.css" rel="stylesheet">
+        
+    <!-- Extra plugin css -->
+    <link href="http://localhost/BePZOZ_2.0/vendor/owl-carousel/owl.carousel.min.css" rel="stylesheet">
+    <link href="http://localhost/BePZOZ_2.0/vendor/bootstrap-selector/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="http://localhost/BePZOZ_2.0/vendor/jquery-ui/jquery-ui.css" rel="stylesheet">
+    <link href="http://localhost/BePZOZ_2.0/vendor/full-page/jquery.fullpage.min.css" rel="stylesheet">
+    <link href="http://localhost/BePZOZ_2.0/vendor/magnify-popup/magnific-popup.css" rel="stylesheet">
+
+        
+    <link href="http://localhost/BePZOZ_2.0/css/style.css" rel="stylesheet">
+    <link href="http://localhost/BePZOZ_2.0/css/responsive.css" rel="stylesheet">
+
+    <!--    For search engines-->
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="BePZOZ => state-of-the-art webshop that sells unique items ">
+
+    <!--    Open Graph to display on social media-->
+    <meta property="og:url"                content="http://BePZOZ.be" />
+    <meta property="og:type"               content="webshop" />
+    <meta property="og:title"              content="BePZOZ" />
+    <meta property="og:description"        content="BePZOZ => state-of-the-art webshop that sells unique items" />
+    <meta property="og:image"              content="http://localhost/BePZOZ_2.0/public/images/sharable.jpg"/>
+
+</head>
+<body>
+   {% include 'templates/partials/navigation.twig' %}
+   
+    <div class="container">
+       {% block content %}{% endblock %}
+    </div>
+   {% include 'templates/partials/footer.twig' %}
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js'></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    {% block scripts %}{% endblock %}
+           
+            <!--================End Footer Area =================-->
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="http://localhost/BePZOZ_2.0/js/jquery-3.2.1.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="http://localhost/BePZOZ_2.0/js/popper.min.js"></script>
+        <script src="http://localhost/BePZOZ_2.0/js/bootstrap.min.js"></script>
+        <!-- Rev slider js -->
+        <script src="http://localhost/BePZOZ_2.0/vendor/revolution/js/jquery.themepunch.tools.min.js"></script>
+        <script src="http://localhost/BePZOZ_2.0/vendor/revolution/js/jquery.themepunch.revolution.min.js"></script>
+        <script src="http://localhost/BePZOZ_2.0/vendor/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+        <script src="http://localhost/BePZOZ_2.0/vendor/revolution/js/extensions/revolution.extension.video.min.js"></script>
+        <script src="http://localhost/BePZOZ_2.0/vendor/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+        <script src="http://localhost/BePZOZ_2.0/vendor/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+        <script src="http://localhost/BePZOZ_2.0/vendor/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+        <script src="http://localhost/BePZOZ_2.0/vendor/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+        <!-- Extra plugin css -->
+        <script src="http://localhost/BePZOZ_2.0/vendor/counterup/jquery.waypoints.min.js"></script>
+        <script src="http://localhost/BePZOZ_2.0/vendor/counterup/jquery.counterup.min.js"></script>
+        <script src="http://localhost/BePZOZ_2.0/vendor/owl-carousel/owl.carousel.min.js"></script>
+        <script src="http://localhost/BePZOZ_2.0/vendor/bootstrap-selector/js/bootstrap-select.min.js"></script>
+        <script src="http://localhost/BePZOZ_2.0/vendor/image-dropdown/jquery.dd.min.js"></script>
+        <script src="http://localhost/BePZOZ_2.0/js/smoothscroll.js"></script>
+        <script src="http://localhost/BePZOZ_2.0/vendor/isotope/imagesloaded.pkgd.min.js"></script>
+        <script src="http://localhost/BePZOZ_2.0/vendor/isotope/isotope.pkgd.min.js"></script>
+        <script src="http://localhost/BePZOZ_2.0/vendor/full-page/jquery.fullpage.min.js"></script>
+        <script src="http://localhost/BePZOZ_2.0/vendor/magnify-popup/jquery.magnific-popup.min.js"></script>
+        <script src="http://localhost/BePZOZ_2.0/vendor/vertical-slider/js/jQuery.verticalCarousel.js"></script>
+        <script src="http://localhost/BePZOZ_2.0/vendor/jquery-ui/jquery-ui.js"></script>
+        
+        <script src="http://localhost/BePZOZ_2.0/js/full-page.js"></script>
+
+        <script src="http://localhost/BePZOZ_2.0/js/theme.js"></script>
+
+</body>
+</html>
