@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 23 nov 2018 om 19:10
+-- Gegenereerd op: 29 nov 2018 om 18:23
 -- Serverversie: 10.1.28-MariaDB
 -- PHP-versie: 7.1.11
 
@@ -168,11 +168,11 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `image`, `price`, `title`, `slug`, `description`, `stock`, `created_at`, `updated_at`) VALUES
-(1, 'Micro usb Magneet Charger Voor xiaomi\r\n', 'Black1MForMicro.jpg', 199.99, 'Micro usb Magneet Charger', 'Micro usb Magneet Charger', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.', 0, '2018-10-28 16:14:21', '2018-07-10 13:47:14'),
+(1, 'Micro usb Magneet Charger Voor xiaomi\r\n', 'Kabel.jpg', 199.99, 'Micro usb Magneet Charger', 'Micro usb Magneet Charger', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.', 0, '2018-11-28 13:18:54', '2018-07-10 13:47:14'),
 (2, 'Micro Usb Plug for Magneet Charger ', 'PlugAppleNoCable.jpg', 156.56, 'Micro Usb Plug for Magneet Charger ', 'Micro Usb Plug for Magneet Charger ', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.', 0, '2018-10-28 16:14:21', '2018-07-10 15:30:33'),
-(3, 'Magneet Charger Voor iphone\r\n', 'Black1MForMicro.jpg', 169.45, 'Magneet Charger Voor iphone', 'Magneet Charger Voor iphone', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.', 5, '2018-10-28 16:14:21', '2018-07-10 14:30:51'),
-(4, 'Plug for Magneet Charger Voor iphone', 'PlugAppleNoCable.jpg', 199.99, 'Plug for Magneet Charger Voor iphone', 'Plug for Magneet Charger Voor iphone', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.', 5, '2018-10-28 16:14:21', '2018-07-10 13:30:10'),
-(5, 'Type-C Magneet Charger Voor Samsung \r\n', 'Black1MForMicro.jpg', 156.56, 'Type-C Magneet Charger Voor Samsung ', 'Type-C Magneet Charger Voor Samsung ', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.', 7, '2018-10-28 16:14:21', '2018-07-10 15:30:33');
+(3, 'Magneet Charger Voor iphone\r\n', 'PlugTypeCNoCable.jpg', 169.45, 'Magneet Charger Voor iphone', 'Magneet Charger Voor iphone', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.', 5, '2018-11-28 13:18:54', '2018-07-10 14:30:51'),
+(4, 'Plug for Magneet Charger Voor iphone', 'PZOZ-Magnetische-Kabel.jpg', 199.99, 'Plug for Magneet Charger Voor iphone', 'Plug for Magneet Charger Voor iphone', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.', 5, '2018-11-28 13:18:54', '2018-07-10 13:30:10'),
+(5, 'Type-C Magneet Charger Voor Samsung \r\n', 'PZOZ-Magnetische-Kabel-Micro-usb-Type-C-.jpg', 156.56, 'Type-C Magneet Charger Voor Samsung ', 'Type-C Magneet Charger Voor Samsung ', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.', 7, '2018-11-28 13:18:54', '2018-07-10 15:30:33');
 
 --
 -- Indexen voor geëxporteerde tabellen
