@@ -3097,6 +3097,9 @@ i:before {
       text-align: left; }
       .cart_items .table tbody tr td .media .d-flex {
         padding-right: 35px; }
+      .cart_items .table tbody tr td .media .cart_img img {
+        width: 100px;
+        height: 100px; }
       .cart_items .table tbody tr td .media .media-body {
         vertical-align: middle;
         align-self: center; }
