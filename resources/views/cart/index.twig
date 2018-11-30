@@ -4,6 +4,7 @@
 
 
 
+<!--
 <div class="row">
     <div class="col-md-8">
         {% if basket.itemCount() %}
@@ -66,4 +67,80 @@
     </div>
     
 </div>
+==============================
+-->
+
+ <!--================Shopping Cart Area =================-->
+    {% if basket.itemCount() %}
+        <section class="shopping_cart_area p_100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="cart_items">
+                            <h3>Your Cart Items</h3>
+                            <div class="table-responsive-md">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th >Product</th>
+                                            <th>Price</th>
+                                            <th>Quantity</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for item in basket.all() %}
+                                        <tr>
+                                            <td>
+                                                <div class="media">
+                                                    <div class="d-flex">
+                                                        <a href="{{ path_for('product.get', { slug: item.slug}) }}">
+                                                            <img width="100px" height="100px" src="http://localhost/BePZOZ_2.0/public/images/product/{{ item.image}}" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <h4><a href="{{ path_for('product.get', { slug: item.slug}) }}">{{ item.title}}</a></h4>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><p class="red">{{ item.price}}</p></td>
+                                            <td>
+                                                <form action="{{ path_for('cart.update',{ slug: item.slug}) }}" method="post" class="form-inline">
+                                                    <select name="quantity" class="form-control input-sm">
+                                                        {% for num in 1..item.stock %}
+                                                        <option value="{{ num }}" {% if num == item.quantity %} selected= "selected"{% endif %}>{{ num }}</option>
+                                                        {% endfor %}
+                                                        <option value="0">None</option>
+                                                    </select>
+                                                    <input type="submit" value="Update" class="add_cart_btn">
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    {% else %}
+                    <p>You have no items in you cart. <a href="{{ path_for('home') }}">Start shopping</a></p>
+                    {% endif %}
+                    
+                    {% if basket.itemCount() and basket.subTotal() %}
+                    <div class="col-lg-4">
+                        <div class="cart_totals_area">
+                            <h4>Cart Totals</h4>
+                            {% include 'cart/partials/summary.twig' %}
+                        </div>
+                        <a href="{{ path_for('order.index')}}" class="btn subs_btn form-control">Proceed to checkout</a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+
+        <!--================End Shopping Cart Area =================-->
+
+
+
 {% endblock%}

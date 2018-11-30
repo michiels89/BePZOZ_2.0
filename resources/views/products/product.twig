@@ -71,6 +71,7 @@
                     <div class="col-lg-7">
                         <div class="product_details_text">
                             <h3>{{ product.title }}</h3>
+<!--
                             <ul class="p_rating">
                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -78,6 +79,7 @@
                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
                                 <li><a href="#"><i class="fa fa-star"></i></a></li>
                             </ul>
+-->
 <!--
                             <div class="add_review">
                                 <a href="#">5 Reviews</a>
@@ -108,19 +110,31 @@
                             </div>
 -->
                             <div class="quantity">
+<!--
                                 <div class="custom">
                                     <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;" class="reduced items-count" type="button"><i class="icon_minus-06"></i></button>
                                     <input type="text" name="qty" id="sst" maxlength="12" value="01" title="Quantity:" class="input-text qty">
                                     <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;" class="increase items-count" type="button"><i class="icon_plus"></i></button>
                                 </div>
+-->
+
                                 {% if product.inStock() %}
-                                     <a href="{{ path_for('cart.add', { slug: product.slug, quantity: 1}) }}" class="add_cart_btn"> Add to cart </a>
+                                <form action="{{ path_for('cart.update',{ slug: product.slug}) }}" method="post" class="form-inline">
+                                    <select name="quantity" class="form-control input-sm">
+                                       {% for num in 1..product.stock %}
+                                       <option value="{{ num }}" {% if num == product.quantity %} selected= "selected"{% endif %}>{{ num }}</option>
+                                       {% endfor %}
+                                        <option value="0">None</option>
+                                    </select>
+                                    <input type="submit" value=" Add to cart" class="add_cart_btn">
+                                </form>
+<!--                                     <a href="{{ path_for('cart.add', { slug: product.slug, quantity: 1}) }}" class="add_cart_btn"> Add to cart </a>-->
                                 {% endif %}
                             </div>
                             <div class="shareing_icon">
                                 <h5>share :</h5>
                                 <ul>
-                                    <li><a href="#"><i class="social_facebook"></i></a></li>
+                                    <li><a href="http://www.facebook.com/share.php?u=www.bepzoz.com" onclick="return fb_like()" target="_blank"><i class="social_facebook"></i></a></li>
                                     <li><a href="#"><i class="social_twitter"></i></a></li>
                                     <li><a href="#"><i class="social_pinterest"></i></a></li>
                                     <li><a href="#"><i class="social_instagram"></i></a></li>
