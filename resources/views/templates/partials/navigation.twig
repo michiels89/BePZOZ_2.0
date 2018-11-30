@@ -114,9 +114,10 @@
                                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                             </ul>
                             <ul class="navbar-nav justify-content-end">
-                                <li class="search_icon"><a href="#"><i class="icon-magnifier icons"></i></a></li>
-                                <li class="user_icon"><a href="#"><i class="icon-user icons"></i></a></li>
-                                <li class="cart_cart"><a href="{{ path_for('cart.index')}}"><i class="icon-handbag icons"></i></a></li>
+<!--                                <li class="search_icon"><a href="#"><i class="icon-magnifier icons"></i></a></li>-->
+                                <li class="user_icon"><a href="{{ path_for('login.index')}}"><i class="icon-user icons"></i></a></li>
+                                <li class=""><a href="{{ path_for('cart.index')}}"><i class="icon-handbag icons"> ({{ basket.itemCount()}})</i></a></li>
+<!--                                <li class="cart_cart"><a href="{{ path_for('cart.index')}}"><i class="icon-handbag icons">({{ basket.itemCount()}})</i></a></li>-->
                             </ul>
                         </div>
                     </nav>

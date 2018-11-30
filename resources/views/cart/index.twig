@@ -123,7 +123,18 @@
                     </div>
                     
                     {% else %}
-                    <p>You have no items in you cart. <a href="{{ path_for('home') }}">Start shopping</a></p>
+                            <!--================login Area =================-->
+                    <section class="emty_cart_area p_100">
+                        <div class="container">
+                            <div class="emty_cart_inner">
+                                <i class="icon-handbag icons"></i>
+                                <h3>Your Cart is Empty</h3>
+                                <h4>Start <a href="{{ path_for('home') }}">shopping</a></h4>
+                            </div>
+                        </div>
+                    </section>
+                            <!--================End login Area =================-->
+<!--                    <p>You have no items in you cart. <a href="{{ path_for('home') }}">Start shopping</a></p>-->
                     {% endif %}
                     
                     {% if basket.itemCount() and basket.subTotal() %}

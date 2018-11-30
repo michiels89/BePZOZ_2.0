@@ -21,3 +21,5 @@ $app->post('/order', ['Cart\Controllers\OrderController', 'create'])->setName('o
 
 
 $app->get('/braintree/token', ['Cart\Controllers\BraintreeController', 'token'])->setName('braintree.token');
+
+$app->get('/login', ['Login\Controllers\LoginController', 'index'])->setName('login.index');
