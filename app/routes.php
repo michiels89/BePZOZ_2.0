@@ -22,4 +22,11 @@ $app->post('/order', ['Cart\Controllers\OrderController', 'create'])->setName('o
 
 $app->get('/braintree/token', ['Cart\Controllers\BraintreeController', 'token'])->setName('braintree.token');
 
-$app->get('/login', ['Login\Controllers\LoginController', 'index'])->setName('login.index');
+
+$app->get('/login', ['Cart\Controllers\LoginController', 'index'])->setName('login.index');
+
+
+$app->get('/contact', ['Cart\Controllers\ContactController', 'index'])->setName('contact.index');
+
+$app->post('/contact', ['Cart\Controllers\ContactController', 'send'])->setName('contact.send');
+

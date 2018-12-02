@@ -57,6 +57,9 @@ return [
     Payment::class =>function(ContainerInterface $c) {
         return new Payment;
     },
+    Login::class =>function(ContainerInterface $c) {
+        return new Login;
+    },
     
     Basket::class => function(ContainerInterface $c){
       return new Basket(
