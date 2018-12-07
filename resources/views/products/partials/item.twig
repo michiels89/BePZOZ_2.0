@@ -1,8 +1,8 @@
 <div class="col-lg-4 col-sm-6">
     <div class="l_product_item">
         <div class="l_p_img">
-            <img class="img-fluid" src="http://localhost/BePZOZ_2.0/public/images/product/{{ product.image}}" alt="">
-            <h5 class="sale">Sale</h5>
+            <img class="img-fluid" src="http://localhost/BePZOZ_2.0/public/images/product/{{product.category}}/{{ product.image}}" alt="">
+            <h5 class="sale">Best Offer!</h5>
         </div>
         <div class="l_p_text">
             <ul>
@@ -11,7 +11,7 @@
                 <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
             </ul>
             <h4>{{product.title}}</h4>
-            <h5><del>$25.50</del>€ {{ product.price}}</h5>
+            <h5>€ {{ product.price}}</h5>
         </div>
     </div>
 </div>

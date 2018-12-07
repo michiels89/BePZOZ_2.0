@@ -662,11 +662,16 @@
                         .tp-thumb-image{
                             padding: 0px;
                             box-shadow: none;
+                            width: 70px;
+                            height: 81px;
+                            
                         }
                     }
                     &.selected{
                         .tp-thumb-img-wrap{
                             border: 1px solid #000;
+                            width: 76px;
+                            height: 84px;
                         }
                     }    
                 }

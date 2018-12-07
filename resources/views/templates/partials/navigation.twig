@@ -23,7 +23,64 @@
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
-                                <li class="nav-item"><a class="nav-link" href="{{ path_for('home')}}">Home</a></li>
+<!--
+                                <li class="nav-item dropdown submenu">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    At Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item"><a class="nav-link" href="index.html">Home Simple</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="home-carousel.html">Home Carousel</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="home-fullwidth.html">Home Full Width</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="home-parallax.html">Home Parallax</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="home-sidebar.html">Home Boxed</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="home-fixed-menu.html">Home Fixed</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown submenu">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    At Work <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item"><a class="nav-link" href="compare.html">Compare</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="checkout.html">Checkout Method</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="register.html">Checkout Register</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="track.html">Track</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="404.html">404</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown submenu">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    On bicycle<i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item"><a class="nav-link" href="index.html">Home Simple</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="home-carousel.html">Home Carousel</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="home-fullwidth.html">Home Full Width</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="home-parallax.html">Home Parallax</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="home-sidebar.html">Home Boxed</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="home-fixed-menu.html">Home Fixed</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown submenu">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    With Car <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item"><a class="nav-link" href="compare.html">Compare</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="checkout.html">Checkout Method</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="register.html">Checkout Register</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="track.html">Track</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="404.html">404</a></li>
+                                    </ul>
+                                </li>
+-->
+                                <li class="nav-item"><a class="nav-link" href="{{ path_for('atHome')}}">At Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ path_for('work')}}">At Work</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ path_for('bicycle')}}">On Bicycle</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ path_for('car')}}">With Car</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{ path_for('contact.index')}}">Contact</a></li>
                             </ul>
@@ -46,7 +103,7 @@
                 <div class="c_banner_inner">
                     <h3>Mijn Veiligheid</h3>
                     <ul>
-                        <li class="current"><a href="#">Safety first</a></li>
+                        <li class="current"><a href="#">Safety first!</a></li>
                     </ul>
                 </div>
             </div>

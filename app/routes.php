@@ -25,6 +25,14 @@ $app->get('/braintree/token', ['Cart\Controllers\BraintreeController', 'token'])
 
 $app->get('/login', ['Cart\Controllers\LoginController', 'index'])->setName('login.index');
 
+$app->get('/atHome', ['Cart\Controllers\AtHomeController', 'index'])->setName('atHome');
+
+$app->get('/work', ['Cart\Controllers\WorkController', 'index'])->setName('work');
+
+$app->get('/car', ['Cart\Controllers\CarController', 'index'])->setName('car');
+
+$app->get('/bicycle', ['Cart\Controllers\BicycleController', 'index'])->setName('bicycle');
+
 
 $app->get('/contact', ['Cart\Controllers\ContactController', 'index'])->setName('contact.index');
 

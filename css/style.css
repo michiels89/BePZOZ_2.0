@@ -2382,9 +2382,13 @@ i:before {
     border: 1px solid transparent; }
     .product_details_slider #product_slider2 .tp-thumbs .tp-thumbs-inner-wrapper .tp-thumb .tp-thumb-img-wrap .tp-thumb-image {
       padding: 0px;
-      box-shadow: none; }
+      box-shadow: none;
+      width: 70px;
+      height: 81px; }
   .product_details_slider #product_slider2 .tp-thumbs .tp-thumbs-inner-wrapper .tp-thumb.selected .tp-thumb-img-wrap {
-    border: 1px solid #000; }
+    border: 1px solid #000;
+    width: 76px;
+    height: 84px; }
 
 .product_details_text {
   max-width: 570px; }

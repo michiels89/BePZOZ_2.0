@@ -1,0 +1,23 @@
+{% extends 'templates/app.twig' %}
+
+{% block content %}
+        <!--================Categories Product Bicycle Area ====================-->
+        <section class="no_sidebar_2column_area">
+            <div class="container">       
+                <h1>Safety on bicycle</h1> 
+                <div class="two_column_product">
+                    <div class="row">
+                       
+                       {% for index, product in products %}
+                            {% if product.category == 'bicycle'%}
+                                {% include 'products/partials/item.twig' with{product: product} %}
+                            {% endif%}
+                       {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================End Categories Product:Bicycle Area =================-->
+
+        
+{% endblock %}
