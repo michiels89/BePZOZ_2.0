@@ -3,7 +3,7 @@
 
 {% block content %}
 
-<form action="{{ path_for('order.create') }}" method="post" autocomplete="off">
+<form class="detail-form" action="{{ path_for('order.create') }}" method="post" autocomplete="off">
     <div class="row">
         <div class="col-md-8">
             <div class="row">
@@ -107,7 +107,7 @@
                  {% include 'cart/partials/contents.twig' %}
                  {% include 'cart/partials/summary.twig' %}
                  
-                 <button type="submit" class="btn btn-default">Place order</button>
+                 <button type="submit" class="add_cart_btn">Place order</button>
             </div>
             
         </div>

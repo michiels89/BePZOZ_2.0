@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 29 nov 2018 om 18:23
--- Serverversie: 10.1.28-MariaDB
--- PHP-versie: 7.1.11
+-- Gegenereerd op: 07 dec 2018 om 18:54
+-- Serverversie: 10.1.36-MariaDB
+-- PHP-versie: 7.1.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -56,15 +56,32 @@ CREATE TABLE `customers` (
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `customers`
 --
 
-INSERT INTO `customers` (`id`, `name`, `email`, `created_at`, `updated_at`) VALUES
-(7, 'michiels lynn', 'michiels89@hotmail.com', '2018-07-10 14:30:49', '2018-07-10 14:30:49');
+INSERT INTO `customers` (`id`, `name`, `email`, `created_at`, `updated_at`, `password`) VALUES
+(7, 'michiels lynn', 'michiels89@hotmail.com', '2018-07-10 14:30:49', '2018-07-10 14:30:49', '');
+
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `login`
+--
+
+CREATE TABLE `login` (
+  `id` int(11) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `city` varchar(20) NOT NULL,
+  `phone` varchar(15) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -154,25 +171,43 @@ CREATE TABLE `products` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `image` varchar(100) NOT NULL,
+  `image2` varchar(50) NOT NULL,
+  `image3` varchar(50) NOT NULL,
+  `image4` varchar(50) NOT NULL,
   `price` float NOT NULL,
   `title` varchar(255) NOT NULL,
   `slug` varchar(255) NOT NULL,
   `description` text NOT NULL,
   `stock` int(11) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `category` varchar(50) NOT NULL,
+  `Colors` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `image`, `price`, `title`, `slug`, `description`, `stock`, `created_at`, `updated_at`) VALUES
-(1, 'Micro usb Magneet Charger Voor xiaomi\r\n', 'Kabel.jpg', 199.99, 'Micro usb Magneet Charger', 'Micro usb Magneet Charger', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.', 0, '2018-11-28 13:18:54', '2018-07-10 13:47:14'),
-(2, 'Micro Usb Plug for Magneet Charger ', 'PlugAppleNoCable.jpg', 156.56, 'Micro Usb Plug for Magneet Charger ', 'Micro Usb Plug for Magneet Charger ', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.', 0, '2018-10-28 16:14:21', '2018-07-10 15:30:33'),
-(3, 'Magneet Charger Voor iphone\r\n', 'PlugTypeCNoCable.jpg', 169.45, 'Magneet Charger Voor iphone', 'Magneet Charger Voor iphone', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.', 5, '2018-11-28 13:18:54', '2018-07-10 14:30:51'),
-(4, 'Plug for Magneet Charger Voor iphone', 'PZOZ-Magnetische-Kabel.jpg', 199.99, 'Plug for Magneet Charger Voor iphone', 'Plug for Magneet Charger Voor iphone', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.', 5, '2018-11-28 13:18:54', '2018-07-10 13:30:10'),
-(5, 'Type-C Magneet Charger Voor Samsung \r\n', 'PZOZ-Magnetische-Kabel-Micro-usb-Type-C-.jpg', 156.56, 'Type-C Magneet Charger Voor Samsung ', 'Type-C Magneet Charger Voor Samsung ', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.', 7, '2018-11-28 13:18:54', '2018-07-10 15:30:33');
+INSERT INTO `products` (`id`, `name`, `image`, `image2`, `image3`, `image4`, `price`, `title`, `slug`, `description`, `stock`, `created_at`, `updated_at`, `category`, `Colors`) VALUES
+(1, 'WEST BIKING® 20 L Bike Panniers Bag ', 'BicycleBag1.jpg', 'BicycleBag2.jpg', 'BicycleBag3.jpg', 'BicycleBag4.jpg', 89.35, 'WEST BIKING® 20 L Bike Panniers Bag ', 'WEST BIKING® 20 L Bike Panniers Bag ', 'Bike Rack Bag Waterproof, Adjustable, Large Capacity Bike Bag Nylon Bicycle Bag Cycle Bag Cycling \r\n', 10, '2018-12-07 11:43:44', '2018-07-10 13:47:14', 'bicycle', 'black'),
+(2, 'Rosewheel 13 L Bike Rack Bag Waterproof', 'RoswhellBicycleBag1.jpg', 'RoswhellBicycleBag2.jpg', 'RoswhellBicycleBag3.jpg', 'RoswhellBicycleBag4.jpg', 72.45, 'Rosewheel 13 L Bike Rack Bag Waterproof', 'Rosewheel 13 L Bike Rack Bag Waterproof', 'Waterproof, Reflective, Water Bottle Pocket Bike Bag Polyester Bicycle Bag Cycle Bag Cycling', 10, '2018-12-07 11:43:44', '2018-07-10 15:30:33', 'bicycle', 'black or blue'),
+(3, 'ROSWHEEL 35 L Bike Panniers Bag 3 In 1, Waterproof\r\n', 'RosBicycleBag1.jpg', 'RosBicycleBag2.jpg', 'RosBicycleBag3.jpg', 'RosBicycleBag4.jpg', 224.86, 'ROSWHEEL 35 L Bike Panniers Bag 3 In 1, Waterproof', 'ROSWHEEL 35 L Bike Panniers Bag 3 In 1, Waterproof', 'Bike Panniers Bag 3 In 1, Waterproof, Adjustable Bike Bag PU Leather / 600D Polyester Bicycle Bag Cycle Bag Cycling / Bike / Large Capacity / Waterproof Zipper', 15, '2018-12-07 11:43:44', '2018-07-10 14:30:51', 'bicycle', 'army green or black'),
+(4, 'FJQXZ Bike Rack Bag Waterproof', 'FJQXZBicycleBag1.jpg', 'FJQXZBicycleBag2.jpg', 'FJQXZBicycleBag2.jpg', 'FJQXZBicycleBag2.jpg', 142.34, 'FJQXZ Bike Rack Bag Waterproof', 'FJQXZ Bike Rack Bag Waterproof', 'Bike Rack Bag Waterproof, Reflective, Wearable Bike Bag EVA Bicycle Bag Cycle Bag Cycling', 10, '2018-12-07 11:43:44', '2018-07-10 13:30:10', 'bicycle', 'black fluo yellow only'),
+(5, 'First Aid Kit Travel\r\n', 'ehbo1.jpg', 'ehbo2.jpg', 'ehbo3.jpg', 'ehbo4.jpg', 19.95, 'First Aid Kit Travel', 'First Aid Kit Travel', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.', 10, '2018-12-07 11:43:44', '2018-07-10 15:30:33', 'bicycle', ''),
+(6, 'Skate Helmet Children\'s Helmet', 'dinoHelmet1.jpg', 'dinoHelmet2.jpg', 'dinoHelmet3.jpg', 'dinoHelmet4.jpg', 49.95, 'Skate Helmet Children\'s Helmet', 'Skate Helmet Children\'s Helmet', 'Skate Helmet Children\'s Helmet CE EN1078 Certification Adjustable Mountain Urban Breathable Protective Ultra Light (UL) for Skating', 10, '2018-12-07 12:39:18', '0000-00-00 00:00:00', 'bicycle', 'green only'),
+(7, 'Skate Helmet Children\'s Helmet', 'sharkHelmet1.jpg', 'sharkHelmet2.jpg', 'sharkHelmet3.jpg', 'sharkHelmet4.jpg', 54.95, 'Skate Helmet Children\'s Helmet', 'Skate Helmet Children\'s Helmet', 'Skate Helmet Children\'s Helmet CE Certification Adjustable Mountain Urban Ultra Light (UL) for Cycling / Bike Ice Skate Skateboarding', 10, '2018-12-07 12:39:18', '0000-00-00 00:00:00', 'bicycle', 'Blue only'),
+(8, 'Scohiro-Work Adults Bike Helmet', 'adultHelmet1.jpg', 'adultHelmet2.jpg', 'adultHelmet3.jpg', 'adultHelmet4.jpg', 84.76, 'Scohiro-Work Adults Bike Helmet', 'Scohiro-Work Adults Bike Helmet', 'Scohiro-Work Adults Bike Helmet 34 Vents CE / CE EN 1077 Impact Resistant, Light Weight, \r\nAdjustable Fit EPS, PC Sports Road Cycling / Recreational Cycling / Cycling / Bike ', 10, '2018-12-07 12:39:18', '0000-00-00 00:00:00', 'bicycle', 'Green , Blue , Black/Red, White, Fushsia, Black'),
+(9, 'Smoke & Gas Detectors', 'detector1.jpg', 'detector2.jpg', 'detector3.jpg', 'detector4.jpg', 34.65, 'Smoke & Gas Detectors', 'Smoke & Gas Detectors', 'Smoke & Gas Detectors co Carbon Monoxide Detector Fire Smoke Sensor Alarm Combination 2 in 1', 10, '2018-12-07 12:39:18', '0000-00-00 00:00:00', 'atHome', ''),
+(10, '1pcs PP Goggles welding', 'weldingMask1.jpg', 'weldingMask2.jpg', 'weldingMask3.jpg', 'weldingMask4.jpg', 59.95, '1pcs PP Goggles welding', '1pcs PP Goggles welding', '1pcs PP Goggles welding / Automatic dimming / Safety & Protective Gear Full Face Mask (3x extra screens)', 10, '2018-12-07 12:39:18', '0000-00-00 00:00:00', 'work', 'carbon look'),
+(11, '1pc Rubber Filter Mask', 'mask1.jpg', 'mask2.jpg', 'mask3.jpg', '', 49.35, '1pc Rubber Filter Mask', '1pc Rubber Filter Mask', '1pc Rubber Filter Mask Protection Safety & Protective Gear Gas Protection Dustproof Breathable', 10, '2018-12-07 12:39:18', '0000-00-00 00:00:00', 'work', ''),
+(12, 'Gas Mask (full face)', 'maskFullFace1.jpg', 'maskFullFace2.jpg', 'maskFullFace3.jpg', 'maskFullFace4.jpg', 39.95, 'Gas Mask (full face)', 'Gas Mask (full face)', 'Provide Anti Industrial Pesticide Active Carbon For Gas Mask (full face)', 10, '2018-12-07 12:39:18', '0000-00-00 00:00:00', 'work', ''),
+(13, 'First Aid Kit Travel', 'ehbo1.jpg', 'ehbo2.jpg', 'ehbo3.jpg', 'ehbo4.jpg', 19.95, 'First Aid Kit Travel', 'First Aid Kit Travel', '', 10, '2018-12-07 12:39:18', '0000-00-00 00:00:00', 'work', ''),
+(14, 'First Aid Kit Travel', 'ehbo1.jpg', 'ehbo2.jpg', 'ehbo3.jpg', 'ehbo4.jpg', 19.95, 'First Aid Kit Travel', 'First Aid Kit Travel', '', 10, '2018-12-07 12:39:18', '0000-00-00 00:00:00', 'car', ''),
+(15, 'Full HD 1920 x 1080 HD Dashcam', 'dashcam1.jpg', 'dashcam2.jpg', 'dashcam3.jpg', 'dashcam4.jpg', 49.95, 'Full HD 1920 x 1080 HD Dashcam', 'Full HD 1920 x 1080 HD Dashcam', 'Full HD 1920 x 1080 HD Car DVR Car DVR Camera Dashcam Night Vision Video Registrator Recorder G-sensor Dash Cam', 10, '2018-12-07 12:39:18', '0000-00-00 00:00:00', 'car', 'blue or black'),
+(16, 'magnetische usb oplaadkabel met kopje naar keuze(usb type-c, micro-usb, iphone)', 'magneticCharger1.jpg', 'magneticCharger2.jpg', 'magneticCharger3.jpg', 'magneticCharger4.jpg', 17.95, 'magnetische usb oplaadkabel (usb type-c, micro-usb, iphone)', 'magnetische usb oplaadkabel (usb type-c, micro-usb, iphone)', '-Ondersteund ios, usb-c en micro-usb toestellen. \r\n(smartphones, tablets, controllers voor xbox one en PS4, BT speakers, etc.)\r\n-Vervaardigd uit hoogwaardig materiaal.\r\n-Voorkom stof en slijtage aan je oplaadpoort.\r\n-Ondersteund snel opladen en data transfer.\r\n-Zeer sterke magneet voor een goede en snelle connectie.\r\n-Elimineer gevaar in de auto dankzij deze kabel die snel met 1 hand aan te sluiten is.\r\n-Extra kopstukjes zijn apart verkrijgbaar.', 30, '2018-12-07 12:39:18', '0000-00-00 00:00:00', 'car', 'zilver'),
+(17, 'kopjes magnetische usb oplaadkabel (usb type-c, micro-usb, iphone)', 'magneticCharger2.jpg', 'magneticCharger1.jpg', 'magneticCharger3.jpg', 'magneticCharger4.jpg', 6.95, 'kopjes magnetische usb oplaadkabel (usb type-c, micro-usb, iphone)', 'kopjes magnetische usb oplaadkabel (usb type-c, micro-usb, iphone)', '-Ondersteund ios, usb-c en micro-usb toestellen. \r\n(smartphones, tablets, controllers voor xbox one en PS4, BT speakers, etc.)\r\n-Vervaardigd uit hoogwaardig materiaal.\r\n-Voorkom stof en slijtage aan je oplaadpoort.\r\n-Ondersteund snel opladen en data transfer.\r\n-Zeer sterke magneet voor een goede en snelle connectie.\r\n-Elimineer gevaar in de auto dankzij deze kabel die snel met 1 hand aan te sluiten is.\r\n-Extra kopstukjes zijn apart verkrijgbaar.', 20, '2018-12-07 13:11:52', '0000-00-00 00:00:00', 'car', ''),
+(18, '2pcs Car Snow Chains', 'snowChain1.jpg', 'snowChain2.jpg', 'snowChain3.jpg', 'snowChain4.jpg', 115, '2pcs Car Snow Chains', '2pcs Car Snow Chains', '2pcs Car Snow Chains Common Buckle Type For Car Wheel For universal All Models All years', 10, '2018-12-07 13:27:44', '0000-00-00 00:00:00', 'car', 'black or yellow');
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -188,6 +223,12 @@ ALTER TABLE `addresses`
 -- Indexen voor tabel `customers`
 --
 ALTER TABLE `customers`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexen voor tabel `login`
+--
+ALTER TABLE `login`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -231,6 +272,12 @@ ALTER TABLE `customers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
+-- AUTO_INCREMENT voor een tabel `login`
+--
+ALTER TABLE `login`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT voor een tabel `orders`
 --
 ALTER TABLE `orders`
@@ -252,7 +299,7 @@ ALTER TABLE `payments`
 -- AUTO_INCREMENT voor een tabel `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

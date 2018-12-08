@@ -610,7 +610,11 @@
 .no_sidebar_2column_area{
     padding-top: 80px;
     padding-bottom: 80px;
+    .container h1{
+         margin: 0 0 15px 0;
+    }
 }
+
 .two_column_product{
     .pagination_area{
         margin-top: 30px;
@@ -1426,6 +1430,9 @@
     .checkout_btn{
         margin-left: 25px;
     }
+}
+.detail-form{
+    margin-top: 50px;
 }
 
 .cart_totals_area{

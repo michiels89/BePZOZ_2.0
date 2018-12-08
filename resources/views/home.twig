@@ -48,39 +48,6 @@
 -->
         <!--================End Full Page Area =========================-->   
        
-
-        <!--================Categories Product Home Area ====================-->
-        <section class="no_sidebar_2column_area">
-            <div class="container"> 
-                <h1>Safety at home</h1> 
-                <div class="two_column_product">
-                    <div class="row">
-                       {% for index, product in products %}
-                            {% if product.category == 'atHome'%}
-                                {% include 'products/partials/item.twig' with{product: product} %}
-                            {% endif%}
-                       {% endfor %}
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--================End Categories Product:Home Area =================-->
-        <!--================Categories Product Work Area ====================-->
-        <section class="no_sidebar_2column_area">
-            <div class="container">    
-                <h1>Safety at work</h1> 
-                <div class="two_column_product">
-                    <div class="row">
-                       {% for index, product in products %}
-                           {% if product.category == 'work'%}
-                                {% include 'products/partials/item.twig' with{product: product} %}
-                            {% endif%}
-                       {% endfor %}
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--================End Categories Product:work Area =================-->
         <!--================Categories Product Bicycle Area ====================-->
         <section class="no_sidebar_2column_area">
             <div class="container">       
@@ -114,6 +81,39 @@
             </div>
         </section>
         <!--================End Categories Product:Car Area =================-->
+        <!--================Categories Product Home Area ====================-->
+        <section class="no_sidebar_2column_area">
+            <div class="container"> 
+                <h1>Safety at home</h1> 
+                <div class="two_column_product">
+                    <div class="row">
+                       {% for index, product in products %}
+                            {% if product.category == 'atHome'%}
+                                {% include 'products/partials/item.twig' with{product: product} %}
+                            {% endif%}
+                       {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================End Categories Product:Home Area =================-->
+        <!--================Categories Product Work Area ====================-->
+        <section class="no_sidebar_2column_area">
+            <div class="container">    
+                <h1>Safety at work</h1> 
+                <div class="two_column_product">
+                    <div class="row">
+                       {% for index, product in products %}
+                           {% if product.category == 'work'%}
+                                {% include 'products/partials/item.twig' with{product: product} %}
+                            {% endif%}
+                       {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================End Categories Product:work Area =================-->
+
         
 {% endblock %}
 
