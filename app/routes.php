@@ -5,6 +5,8 @@ $app->get('/', ['Cart\Controllers\HomeController','index'])->setName('home');
 
 $app->get('/products/{slug}', ['Cart\Controllers\ProductController','get'])->setName('product.get');
 
+$app->get('/products_color', ['Cart\Controllers\Product_colorController','get'])->setName('product_color.get');
+
 
 $app->get('/cart', ['Cart\Controllers\CartController', 'index'])->setName('cart.index');
 

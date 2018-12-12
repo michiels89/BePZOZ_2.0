@@ -14,6 +14,8 @@ use Cart\Validation\Validator;
 use Cart\Models\Order;
 use Cart\Models\Customer;
 use Cart\Models\Address;
+use Cart\Models\Login;
+use Cart\Models\Color;
 
 
 return [
@@ -59,6 +61,9 @@ return [
     },
     Login::class =>function(ContainerInterface $c) {
         return new Login;
+    },
+    Product_color::class =>function(ContainerInterface $c) {
+        return new Product_color;
     },
     
     Basket::class => function(ContainerInterface $c){

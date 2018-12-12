@@ -98,8 +98,14 @@
                             <h4>€ {{ product.price }}</h4>
                             <p>{{ product.description }}</p><br>
                             {% if product.Colors %}
-                            <h5>Color: {{ product.Colors}}</h5>  
+                            {{ product.Colors }}
+                            {% for color in product.Colors %}
+                            <h5>Color: {{ color}}</h5>  
+                            {% endfor %}
                             {% endif %}
+                            {% for index, color in products_color %}
+                                    {{ color.colorId }}
+                            {% endfor %}
 <!--
                             <div class="p_color">
                                 <h4 class="p_d_title">color <span>*</span></h4>
