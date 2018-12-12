@@ -16,6 +16,7 @@ class AtHomeController
     {
 
         $products = $product->get();
+//        mail('michiels89@hotmail.com', 'test', 'mail', '1');
 
      return $view->render($response,'atHome.twig', [
          'products' => $products

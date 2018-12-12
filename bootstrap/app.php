@@ -19,8 +19,8 @@ $capsule->addConnection([
     
     'driver'=> 'mysql',
 //    'host'=> 'localhost',
-//    'database' => 'lynnmxu249_webshop',
-//    'username' => 'lynnmxu249_rooot',
+//    'database' => 'lynnmxu249_cart',
+//    'username' => 'lynnmxu249_lynn',
 //    'password' => 'qofack7f',
     'host'=> '127.0.0.1',
     'database' => 'cart',

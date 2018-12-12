@@ -66,7 +66,7 @@ body {
 
 body, p, h1, h2, h3, h4, h5, h6 {
   margin: 0px;
-  padding: 0px; }
+  padding: 0px 0px 20px 0px; }
 
 #success {
   display: none; }
@@ -2350,8 +2350,7 @@ i:before {
 /* End Categories Grid Product Details Area css
 ============================================================================================ */
 .no_sidebar_2column_area {
-  padding-top: 80px;
-  padding-bottom: 80px; }
+  padding-top: 40px; }
   .no_sidebar_2column_area .container h1 {
     margin: 0 0 15px 0; }
 
@@ -2388,8 +2387,8 @@ i:before {
       height: 81px; }
   .product_details_slider #product_slider2 .tp-thumbs .tp-thumbs-inner-wrapper .tp-thumb.selected .tp-thumb-img-wrap {
     border: 1px solid #000;
-    width: 76px;
-    height: 84px; }
+    width: 72px;
+    height: 83px; }
 
 .product_details_text {
   max-width: 570px; }
