@@ -30,11 +30,14 @@
 
                                 <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{ path_for('contact.index')}}">Contact</a></li>
+                                <li class="burger"><a href="{{ path_for('cart.index')}}"><i class="icon-handbag icons"> ({{ basket.itemCount()}})</i></a></li>
+
                             </ul>
                             <ul class="navbar-nav justify-content-end">
 <!--                                <li class="search_icon"><a href="#"><i class="icon-magnifier icons"></i></a></li>-->
 <!--                                <li class="user_icon"><a {{ path_for('login.index')}}"><i class="icon-user icons"></i></a></li>-->
                                 <li><a href="{{ path_for('cart.index')}}"><i class="icon-handbag icons"> ({{ basket.itemCount()}})</i></a></li>
+
 
                             </ul>
                         </div>

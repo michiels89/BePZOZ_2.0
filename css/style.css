@@ -1107,8 +1107,8 @@ i:before {
     z-index: -1; }
 
 .c_banner_inner {
-  text-align: center;
-  padding: 170px 0px; }
+  text-align: left;
+  padding: 40px 0px 200px 25px; }
   .c_banner_inner h3 {
     color: #fff;
     font-size: 24px;
@@ -4727,15 +4727,17 @@ i:before {
       color: #0b1033;
       font-weight: 600; }
 
-.link_widget ul li a {
-  font-size: 13px;
-  line-height: 30px;
-  font-family: "Poppins", sans-serif;
-  color: #797b7b;
-  font-weight: 400;
-  transition: all 400ms linear 0s; }
-.link_widget ul li:hover a {
-  color: #d91522; }
+.link_widget {
+  text-align: center; }
+  .link_widget ul li a {
+    font-size: 13px;
+    line-height: 30px;
+    font-family: "Poppins", sans-serif;
+    color: #797b7b;
+    font-weight: 400;
+    transition: all 400ms linear 0s; }
+  .link_widget ul li:hover a {
+    color: #d91522; }
 
 .f_extra_widget {
   padding-left: 30px; }

@@ -16,6 +16,7 @@ use Cart\Models\Customer;
 use Cart\Models\Address;
 use Cart\Models\Login;
 use Cart\Models\Color;
+use Cart\Models\Product_color;
 
 
 return [
@@ -65,7 +66,9 @@ return [
     Product_color::class =>function(ContainerInterface $c) {
         return new Product_color;
     },
-    
+    Color::class =>function(ContainerInterface $c) {
+        return new Color;
+    },
     Basket::class => function(ContainerInterface $c){
       return new Basket(
           $c->get(SessionStorage::class),
